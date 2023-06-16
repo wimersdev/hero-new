@@ -134,7 +134,6 @@ const tick = () => {
   // Обновление OrbitControls
   controls.update();
 
-  // Рендеринг сцены
   renderer.render(scene, camera);
 
   // Вызов tick на следующем кадре
