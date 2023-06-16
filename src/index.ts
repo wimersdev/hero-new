@@ -37,11 +37,11 @@ scene.add(camera); //Add Camera to Scene
 
 const material = new THREE.MeshPhysicalMaterial({
   color: 0x222fff,
-  roughness: 0.05,
-  transmission: 0.7,
+  roughness: 0.3,
+  transmission: 1,
   thickness: 1,
   envMap: hdrEquirect,
-  envMapIntensity: 0.5,
+  envMapIntensity: 1,
 });
 
 const object = new THREE.Object3D();
@@ -51,7 +51,7 @@ const clones = [];
 
 const gltfLoader = new GLTFLoader();
 gltfLoader.load(
-  'https://uploads-ssl.webflow.com/6385ed21375f1c00a4a3f887/648c4a2e4f99b8ac202ee817_slash.txt',
+  'https://uploads-ssl.webflow.com/6385ed21375f1c00a4a3f887/648c65fec7e4396e93dc5ccd_slash2.txt',
   (gltf) => {
     const slash = gltf.scene.children[0].geometry;
     const bufferMesh = new THREE.Mesh(slash, material);
